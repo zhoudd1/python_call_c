@@ -1,0 +1,10 @@
+1、python向c语言写数据
+
+1) 先将接收端编译成一个共享链接库
+gcc/arm-linux-gnueabihf-gcc -o bluetooth_proxy.so -shared -fPIC bluetooth_proxy.c
+2）运行发送端python脚本即可将python数据发送到c语言接口函数。
+python bt_msg_send_simple.py
+
+2、python从c语言读取数据
+既然能调用c语言链接库函数参数来发送数据，接收数据也可以从通过c语言函数返回值传递了。
+python_data = func.bluetooth_proxy_cb(var)
