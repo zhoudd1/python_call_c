@@ -8,3 +8,6 @@ python bt_msg_send_simple.py
 2、python从c语言读取数据
 既然能调用c语言链接库函数参数来发送数据，接收数据也可以从通过c语言函数返回值传递了。
 python_data = func.bluetooth_proxy_cb(var)
+
+3、一个更完善的例子在另外一个分支
+https://github.com/zhoudd1/linux_ipc/tree/master/shm_fifo
